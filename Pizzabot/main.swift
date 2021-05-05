@@ -7,5 +7,13 @@
 
 import Foundation
 
-print("Hello, World!")
+let builder = DirectionsBuilder()
+
+let arguments = CommandLine.arguments
+
+if arguments.count < 2 {
+        _ = builder.generateDirections(input: nil)
+    } else {
+        _ = builder.generateDirections(input: arguments[1])
+    }
 
